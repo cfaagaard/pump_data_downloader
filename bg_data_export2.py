@@ -95,7 +95,7 @@ class LatestActivity (object):
     def checkIfRun(self):
         return True
         dl = datetime.utcnow() - self.config['lastPumpRead']
-        if dl.days == 0 and dl.seconds < (60 * 60):
+        if dl.days == 0 and dl.seconds < (60 * 14):
             print 'Short time since last run:', dl
             return False
         else:
